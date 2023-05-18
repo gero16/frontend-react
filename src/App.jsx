@@ -7,8 +7,8 @@ import { useEffect } from 'react'
 function App() {
   const [count, setCount] = useState(0)
 
-  console.log(import.meta.env.VITE_SOME_URL)
-  const url =  "http://localhost:3000/products"
+  console.log(import.meta.env.VITE_SOME_URL_BACKEND)
+  const url =  import.meta.env.VITE_SOME_URL_BACKEND ||"http://localhost:3000/products"
   const getData = async () => {
     const requestOptions = {
       method: "GET",
